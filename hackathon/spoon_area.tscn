@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://ctbae4n4tkcdj"]
 
 [ext_resource type="Script" uid="uid://ioxloko3qokc" path="res://spoon_area.gd" id="1_xxst6"]
-[ext_resource type="Texture2D" uid="uid://ndjadv03i3wx" path="res://place_holder_pngs/spoon.png" id="2_dvnid"]
+[ext_resource type="Texture2D" uid="uid://s654qt8xoia6" path="res://actual_pngs/spoon.png" id="2_xxst6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tapub"]
-size = Vector2(368, 305)
+size = Vector2(125, 130.5)
 
 [node name="spoonArea" type="Area2D" unique_id=2045333420]
 script = ExtResource("1_xxst6")
 
 [node name="spoonCollisionArea" type="CollisionShape2D" parent="." unique_id=1472951522]
-position = Vector2(-1, 0)
+position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_tapub")
 
 [node name="spoon" type="Sprite2D" parent="spoonCollisionArea" unique_id=1178155955]
-position = Vector2(14.000008, 1)
-scale = Vector2(0.75555557, 0.8)
-texture = ExtResource("2_dvnid")
+position = Vector2(1.5000076, 7.75)
+scale = Vector2(0.32352835, 0.41875002)
+texture = ExtResource("2_xxst6")
