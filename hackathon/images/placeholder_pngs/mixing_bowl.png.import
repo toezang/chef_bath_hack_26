@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxm0h1m14y3q6"
-path="res://.godot/imported/mixing_bowl.png-99fdc8e33f61cde5828327b25f970230.ctex"
+path="res://.godot/imported/mixing_bowl.png-c90fd5b619aef481d3e8e67cf7f5b805.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://place_holder_pngs/mixing_bowl.png"
-dest_files=["res://.godot/imported/mixing_bowl.png-99fdc8e33f61cde5828327b25f970230.ctex"]
+source_file="res://images/placeholder_pngs/mixing_bowl.png"
+dest_files=["res://.godot/imported/mixing_bowl.png-c90fd5b619aef481d3e8e67cf7f5b805.ctex"]
 
 [params]
 

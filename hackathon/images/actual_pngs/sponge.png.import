@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbf2crrkyluau"
-path="res://.godot/imported/Baking Utensils copy 5.png-fb56a416abdda22efd7ff31f17930265.ctex"
+uid="uid://byssxr4bts0bo"
+path="res://.godot/imported/sponge.png-2d2a72f32f6435d5a25068ac7b5d231f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Baking Utensils copy 5.png"
-dest_files=["res://.godot/imported/Baking Utensils copy 5.png-fb56a416abdda22efd7ff31f17930265.ctex"]
+source_file="res://images/actual_pngs/sponge.png"
+dest_files=["res://.godot/imported/sponge.png-2d2a72f32f6435d5a25068ac7b5d231f.ctex"]
 
 [params]
 

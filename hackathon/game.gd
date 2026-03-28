@@ -20,10 +20,10 @@ func change_scene(newScene: String) -> void:
 		go_to_order_station()
 
 func go_to_mixing_station() -> void:
-	get_tree().change_scene_to_file("res://mixing_station.tscn")
+	get_tree().change_scene_to_file("res://scenes/mixing_station.tscn")
 	
 func go_to_order_station() -> void:
-	get_tree().change_scene_to_file("res://order_station.tscn")
+	get_tree().change_scene_to_file("res://scenes/order_station.tscn")
 
 func go_to_baking_station() -> void:
-	get_tree().change_scene_to_file("res://baking_station.tscn")
+	get_tree().change_scene_to_file("res://scenes/baking_station.tscn")

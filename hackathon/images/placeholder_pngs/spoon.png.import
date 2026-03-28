@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s654qt8xoia6"
-path="res://.godot/imported/spoon.png-8c5c1d9ab50d6962f7ee9e1691fa8e08.ctex"
+uid="uid://ndjadv03i3wx"
+path="res://.godot/imported/spoon.png-98a886f0072fceedd7819baa2c0a8d5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actual_pngs/spoon.png"
-dest_files=["res://.godot/imported/spoon.png-8c5c1d9ab50d6962f7ee9e1691fa8e08.ctex"]
+source_file="res://images/placeholder_pngs/spoon.png"
+dest_files=["res://.godot/imported/spoon.png-98a886f0072fceedd7819baa2c0a8d5b.ctex"]
 
 [params]
 

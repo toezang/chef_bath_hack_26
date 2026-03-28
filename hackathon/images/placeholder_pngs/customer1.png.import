@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyv1t0r4i2bvy"
-path="res://.godot/imported/mixer.png-77a67718fc61309de2c1b172b7a3f2ba.ctex"
+uid="uid://c1p3fk61xskeo"
+path="res://.godot/imported/customer1.png-883e9fe00aacadc2a3856f80e3827b0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actual_pngs/mixer.png"
-dest_files=["res://.godot/imported/mixer.png-77a67718fc61309de2c1b172b7a3f2ba.ctex"]
+source_file="res://images/placeholder_pngs/customer1.png"
+dest_files=["res://.godot/imported/customer1.png-883e9fe00aacadc2a3856f80e3827b0b.ctex"]
 
 [params]
 

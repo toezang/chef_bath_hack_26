@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djig7ox1fatus"
-path="res://.godot/imported/Baking Utensils.png-0da25bcb6e10523291c3e92b9945269c.ctex"
+uid="uid://deguoxk7qypao"
+path="res://.godot/imported/blender.png-726c68517ae393d9562cd32e33c903ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Baking Utensils.png"
-dest_files=["res://.godot/imported/Baking Utensils.png-0da25bcb6e10523291c3e92b9945269c.ctex"]
+source_file="res://images/actual_pngs/blender.png"
+dest_files=["res://.godot/imported/blender.png-726c68517ae393d9562cd32e33c903ab.ctex"]
 
 [params]
 

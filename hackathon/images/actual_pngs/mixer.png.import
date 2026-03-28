@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b86ee25gvdunb"
-path="res://.godot/imported/mixing_bowl.png-3ccb033a5f78b24c43e5a7f3ba39868e.ctex"
+uid="uid://cyv1t0r4i2bvy"
+path="res://.godot/imported/mixer.png-8e722930637fa96f3988210bf65e2d4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actual_pngs/mixing_bowl.png"
-dest_files=["res://.godot/imported/mixing_bowl.png-3ccb033a5f78b24c43e5a7f3ba39868e.ctex"]
+source_file="res://images/actual_pngs/mixer.png"
+dest_files=["res://.godot/imported/mixer.png-8e722930637fa96f3988210bf65e2d4a.ctex"]
 
 [params]
 
