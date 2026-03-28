@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://canv8j8us2gu8"]
+
+[ext_resource type="Texture2D" uid="uid://cxm0h1m14y3q6" path="res://place_holder_pngs/mixing_bowl.png" id="1_3b4i1"]
+[ext_resource type="Script" uid="uid://d0djaq0suuor0" path="res://mixing_bowl.gd" id="1_ityqu"]
+
+[node name="mixingBowl" type="Sprite2D" unique_id=1967112996]
+position = Vector2(688, 349)
+texture = ExtResource("1_3b4i1")
+script = ExtResource("1_ityqu")
