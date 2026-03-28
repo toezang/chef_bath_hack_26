@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bvr15tv5dvfdg"]
 
-[ext_resource type="Script" uid="uid://b7tmqxcr41yy" path="res://sponge_area.gd" id="1_gss3c"]
+[ext_resource type="Script" uid="uid://b7tmqxcr41yy" path="res://scenes/sponge/sponge_area.gd" id="1_gss3c"]
 [ext_resource type="Texture2D" uid="uid://byssxr4bts0bo" path="res://actual_pngs/sponge.png" id="2_ip0cj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyuln"]
