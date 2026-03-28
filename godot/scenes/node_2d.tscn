@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ctbae4n4tkcdj" path="res://scenes/spoon_area.tscn" id="2_0e48y"]
 [ext_resource type="PackedScene" uid="uid://bvr15tv5dvfdg" path="res://scenes/sponge_area.tscn" id="3_epypp"]
 [ext_resource type="PackedScene" uid="uid://r1q4mbtc5203" path="res://scenes/customer_area.tscn" id="4_0hol4"]
+[ext_resource type="Script" uid="uid://cmwvqk1mc0tue" path="res://scenes/listener.gd" id="6_j7wrs"]
 
 [node name="game" type="Node2D" unique_id=1695942799]
 script = ExtResource("1_q6r6c")
@@ -27,3 +28,6 @@ position = Vector2(548, 497)
 position = Vector2(236, 305)
 
 [node name="baking_station" type="Node2D" parent="." unique_id=2007531514]
+
+[node name="SerialListener" type="Node" parent="." unique_id=2078952550]
+script = ExtResource("6_j7wrs")

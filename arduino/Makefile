@@ -1,4 +1,4 @@
-SERIAL_DEV := /dev/cu.usbmodem1101
+SERIAL_DEV := /dev/cu.usbmodem11101
 SKETCH_NAME := sketch
 SERIAL_BAUD := 115200
 
