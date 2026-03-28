@@ -24,4 +24,3 @@ list: $(wildcard $(SKETCH_NAME)/*.ino)
 .PHONY: clean
 clean:
 	   rm -rf build
-
