@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c5as3w4kq8035"]
+
+[ext_resource type="Script" uid="uid://dtyx33t5uahnr" path="res://order.gd" id="1_vwbfx"]
+
+[node name="orderArea" type="Area2D" unique_id=678147564]
+script = ExtResource("1_vwbfx")
+
+[node name="orderCollisionShape" type="CollisionShape2D" parent="." unique_id=270338981]
+
+[node name="orderSprite" type="Sprite2D" parent="orderCollisionShape" unique_id=706319393]
+
+[node name="Polygon2D" type="Polygon2D" parent="orderCollisionShape" unique_id=1912653738]
+position = Vector2(89.14285, 0)
+scale = Vector2(0.46938777, 1)
+polygon = PackedVector2Array(168, 60, 216, 60, 217, 80, 206.34784, 80, 195.69568, 80, 168, 80)
+
+[node name="Label" type="Label" parent="orderCollisionShape/Polygon2D" unique_id=1443887632]
+offset_left = 176.52174
+offset_top = 66.0
+offset_right = 210.52174
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.007843138, 0, 0, 1)
+theme_override_font_sizes/font_size = 4
+text = "Say \"Hello world\"
+"
+
+[node name="Label2" type="Label" parent="orderCollisionShape/Polygon2D" unique_id=1094159114]
+offset_left = 178.65219
+offset_top = 66.0
+offset_right = 207.65219
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 4
+text = "Cheese Souffle"
