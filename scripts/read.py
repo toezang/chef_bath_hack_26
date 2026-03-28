@@ -1,7 +1,7 @@
 import serial
 import asyncio
 
-port = "/dev/tty.usbmodem1101"
+port = "/dev/tty.usbmodem11101"
 try:
     arduino = serial.Serial(
         port=port, baudrate=115200, timeout=1, dsrdtr=False, rtscts=False
@@ -26,7 +26,6 @@ async def read():
         print("Nothing yet")
         return None
     else:
-        print("trying to parse")
         # Parse input
         data = data.decode("utf-8", errors="ignore")
         data = data.split("\r\n")
@@ -35,6 +34,8 @@ async def read():
         print()
         # Return the ID
         try:
+            with open("/tmp/serial_out.txt", "w") as f:
+                f.write(str(data) + "\n")
             return data[-2]
         except Exception as e:
             # If cannot read the UID, this will fail. Will need to try again
