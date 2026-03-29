@@ -28,12 +28,13 @@ func on_click():
 	print("i have been clicked")
 	if state == "ordering":
 		state = "waiting"
+		Game.currentRecipe = Game.helloWorldSouffle
 		print("creating an order")
-		print('hello world souffle 0:', Game.helloWorldSoufle[0])
+		print('hello world souffle 0:', Game.helloWorldSouffle[0])
 		orderTicket._changeText(
-			Game.helloWorldSoufle[0],
-			Game.helloWorldSoufle[1],
-			Game.helloWorldSoufle[2],
+			Game.helloWorldSouffle[0],
+			Game.helloWorldSouffle[1],
+			Game.helloWorldSouffle[2],
 		)
 
 	

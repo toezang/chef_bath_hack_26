@@ -16,7 +16,7 @@ texture = ExtResource("1_syew5")
 position = Vector2(364, 325)
 
 [node name="mixButtonArea" parent="." unique_id=1923483095 instance=ExtResource("3_mhw2n")]
-position = Vector2(877, 570)
+position = Vector2(985, 555)
 
 [node name="ticketArea" parent="." unique_id=1665167206 instance=ExtResource("4_mhw2n")]
 position = Vector2(1020, 91)

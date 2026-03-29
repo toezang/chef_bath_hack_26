@@ -4,6 +4,10 @@ var mixing_station = preload("res://scenes/mixing_station.tscn")
 var baking_station = preload("res://scenes/baking_station.tscn")
 var serving_station = preload("res://scenes/order_station.tscn")
 
+
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	go_to_order_station()
@@ -33,7 +37,10 @@ func go_to_baking_station() -> void:
 
 
 
-var helloWorldSoufle = [
+var currentRecipe = [];
+
+
+var helloWorldSouffle = [
 	"Outputs Hello World",
 	"72 g Honey
 	101 g Egg

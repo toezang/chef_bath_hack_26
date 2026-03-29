@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bm60os3syg0bc" path="res://scenes/bake_button.tscn" id="5_2yo2c"]
 [ext_resource type="PackedScene" uid="uid://dtgb5y0n06qr0" path="res://scenes/blender/blender_area.tscn" id="6_2ofvr"]
 [ext_resource type="PackedScene" uid="uid://c311cxsy2m1s2" path="res://scenes/mixer/mixer_area.tscn" id="7_67sir"]
+[ext_resource type="PackedScene" uid="uid://tt7n20almamd" path="res://scenes/ticket/ticket_area.tscn" id="8_iflqh"]
 
 [node name="mixing_station" type="Node2D" unique_id=383326379]
 
@@ -33,3 +34,6 @@ position = Vector2(390, 113)
 
 [node name="mixerArea" parent="." unique_id=717251651 instance=ExtResource("7_67sir")]
 position = Vector2(151, 112)
+
+[node name="ticketArea" parent="." unique_id=1665167206 instance=ExtResource("8_iflqh")]
+position = Vector2(1050, 97)
