@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dtgb5y0n06qr0" path="res://scenes/blender/blender_area.tscn" id="6_2ofvr"]
 [ext_resource type="Script" uid="uid://cmwvqk1mc0tue" path="res://scenes/listener.gd" id="7_67sir"]
 [ext_resource type="PackedScene" uid="uid://c311cxsy2m1s2" path="res://scenes/mixer/mixer_area.tscn" id="8_iflqh"]
+[ext_resource type="PackedScene" uid="uid://tt7n20almamd" path="res://scenes/ticket/ticket_area.tscn" id="10_mpew0"]
 
 [node name="mixing_station" type="Node2D" unique_id=383326379]
 script = ExtResource("1_iflqh")
@@ -47,3 +48,6 @@ offset_bottom = 23.0
 script = ExtResource("7_67sir")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=750014684]
+
+[node name="ticketArea" parent="." unique_id=1665167206 instance=ExtResource("10_mpew0")]
+position = Vector2(1072, 86)

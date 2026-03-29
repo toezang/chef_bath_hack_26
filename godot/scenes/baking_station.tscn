@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://csfnkcmunquc"]
 
-[ext_resource type="Script" uid="uid://dnv8wc58emy6w" path="res://scenes/baking_station.gd" id="1_w346c"]
+[ext_resource type="Script" path="res://scenes/baking_station.gd" id="1_w346c"]
 [ext_resource type="Texture2D" uid="uid://cty8l36165qsx" path="res://images/IMG_0413.JPG" id="1_y4uan"]
-[ext_resource type="PackedScene" uid="uid://c5as3w4kq8035" path="res://scenes/order.tscn" id="3_27up3"]
 [ext_resource type="PackedScene" uid="uid://dtdt3g7v2mail" path="res://scenes/serve_button_area.tscn" id="4_ax627"]
+[ext_resource type="PackedScene" uid="uid://tt7n20almamd" path="res://scenes/ticket/ticket_area.tscn" id="4_n4ac7"]
 
 [node name="baking_station" type="Node2D" unique_id=1259147323]
 script = ExtResource("1_w346c")
@@ -15,8 +15,8 @@ texture = ExtResource("1_y4uan")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1407175368]
 
-[node name="orderArea" parent="." unique_id=678147564 instance=ExtResource("3_27up3")]
-position = Vector2(384, -224)
-
 [node name="serveButtonArea" parent="." unique_id=1826175696 instance=ExtResource("4_ax627")]
 position = Vector2(4, 266)
+
+[node name="ticketArea" parent="." unique_id=1665167206 instance=ExtResource("4_n4ac7")]
+position = Vector2(474, -226)

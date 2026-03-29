@@ -13,7 +13,8 @@ scale = Vector2(0.6119792, 0.5823508)
 texture = ExtResource("1_syew5")
 
 [node name="customerArea" parent="." unique_id=974708978 instance=ExtResource("1_3hjwy")]
-position = Vector2(364, 325)
+position = Vector2(357, 254.00002)
+scale = Vector2(1.41, 1.41)
 
 [node name="mixButtonArea" parent="." unique_id=1923483095 instance=ExtResource("3_mhw2n")]
 position = Vector2(877, 570)
