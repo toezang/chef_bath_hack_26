@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var parent = $"../.."
+@onready var cake = $Sprite2D2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,5 +19,6 @@ func _input_event(viewport, event, shape_idx):
 		self.on_click()
 
 func on_click():
+	cake.initiate()
 	Game.go_to_order_station()
 	

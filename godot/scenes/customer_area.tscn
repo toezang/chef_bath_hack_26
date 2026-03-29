@@ -4,16 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://bqs0toghqjhxc" path="res://images/characters/woman1.png" id="2_obcie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcrru"]
-size = Vector2(130, 216)
+size = Vector2(829, 1062)
 
 [node name="customerArea" type="Area2D" unique_id=974708978]
 script = ExtResource("1_jcrru")
 
 [node name="customerCollisionArea" type="CollisionShape2D" parent="." unique_id=1020317101]
-position = Vector2(-1, 30)
+position = Vector2(348.5, -393)
 shape = SubResource("RectangleShape2D_jcrru")
 
 [node name="customerSprite" type="Sprite2D" parent="customerCollisionArea" unique_id=439035213]
-position = Vector2(-4.3628507, -6.2835445)
-scale = Vector2(0.20458344, 0.20067866)
+position = Vector2(27.499985, -19)
+scale = Vector2(0.5694669, 0.5548179)
 texture = ExtResource("2_obcie")

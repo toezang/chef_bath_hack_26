@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dsqnvl2hly8ps"]
+
+[ext_resource type="Texture2D" uid="uid://qf7o00edg44d" path="res://images/actual_pngs/cake.png" id="1_3ulmt"]
+[ext_resource type="Script" uid="uid://csrrn6o858omu" path="res://scenes/ticket/sprite_2d.gd" id="2_8y5tb"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1278424595]
+texture = ExtResource("1_3ulmt")
+script = ExtResource("2_8y5tb")
