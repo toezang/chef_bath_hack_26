@@ -35,3 +35,9 @@ position = Vector2(964, 557)
 
 [node name="Listener" type="Node" parent="." unique_id=1905764796]
 script = ExtResource("7_67sir")
+
+[node name="Label" type="Label" parent="." unique_id=1024475215]
+offset_left = 487.0
+offset_top = 516.0
+offset_right = 645.0
+offset_bottom = 583.0
