@@ -1,5 +1,7 @@
 extends Node
 
+signal message_received(msg: String)
+
 var udp = PacketPeerUDP.new()
 
 func _ready():
@@ -8,5 +10,8 @@ func _ready():
 
 func _process(_delta):
 	while udp.get_available_packet_count() > 0:
-		var msg = udp.get_packet().get_string_from_utf8()
-		print(msg)
+		var packet = udp.get_packet()
+		var msg = packet.get_string_from_ascii()
+		var clean = msg.replace(char(0), "").strip_edges()
+		print("CLEAN: [", clean, "]")
+		message_received.emit(clean)

@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://c0y7hysdejn60"]
 
-[ext_resource type="Script" uid="uid://cmwvqk1mc0tue" path="res://scenes/listener.gd" id="1_2ofvr"]
+[ext_resource type="Script" uid="uid://cbue4hn3745ne" path="res://scenes/mixing_station.gd" id="1_2ofvr"]
 [ext_resource type="Texture2D" uid="uid://dcj03eidtowda" path="res://images/IMG_0411.JPG" id="1_gwhk7"]
 [ext_resource type="PackedScene" uid="uid://bvr15tv5dvfdg" path="res://scenes/sponge_area.tscn" id="2_2ofvr"]
 [ext_resource type="PackedScene" uid="uid://ctbae4n4tkcdj" path="res://scenes/spoon_area.tscn" id="3_67sir"]
 [ext_resource type="PackedScene" uid="uid://canv8j8us2gu8" path="res://scenes/mixing_bowl.tscn" id="4_iflqh"]
 [ext_resource type="PackedScene" uid="uid://bm60os3syg0bc" path="res://scenes/bake_button.tscn" id="5_2yo2c"]
+[ext_resource type="Script" uid="uid://cmwvqk1mc0tue" path="res://scenes/listener.gd" id="7_67sir"]
 
 [node name="mixing_station" type="Node2D" unique_id=383326379]
 script = ExtResource("1_2ofvr")
@@ -27,3 +28,10 @@ position = Vector2(548, 497)
 
 [node name="bakeButtonArea" parent="." unique_id=641651852 instance=ExtResource("5_2yo2c")]
 position = Vector2(964, 557)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=585183530]
+
+[node name="ingredients" type="Sprite2D" parent="." unique_id=1093711312]
+
+[node name="Listener" type="Node" parent="." unique_id=1905764796]
+script = ExtResource("7_67sir")
