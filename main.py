@@ -16,8 +16,6 @@ async def read_serial():
                 print(f"Card detected: {data}")
                 await queue.put(data)
                 sock.sendto(str(data).encode(), ("127.0.0.1", 9999))
-            else:
-                print("nothing")
         except Exception as e:
             pass
         await asyncio.sleep(0.1)
