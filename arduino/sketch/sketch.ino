@@ -152,44 +152,51 @@ void loop(void) {
   uint8_t success;
   uint8_t uid[7];
   uint8_t uidLength;  
-  success = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength);
+  bool cardFound = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength, 500);
 
-  if (success) {
-    if (uidLength == 4)
-    {
-      uint8_t keya[6] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+  if (cardFound) {
+    success = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength);
 
-      success = nfc.mifareclassic_AuthenticateBlock(uid, uidLength, 4, 0, keya);
-
-      if (success)
+    if (success) {
+      if (uidLength == 4)
       {
-        uint8_t data[16];
+        uint8_t keya[6] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
 
-        // If you want to write something to block 4 to test with, uncomment
-        // the following line and this text should be read back in a minute
-        //memcpy(data, (const uint8_t[]){ 'a', 'd', 'a', 'f', 'r', 'u', 'i', 't', '.', 'c', 'o', 'm', 0, 0, 0, 0 }, sizeof data);
-        // success = nfc.mifareclassic_WriteDataBlock (4, data);
+        success = nfc.mifareclassic_AuthenticateBlock(uid, uidLength, 4, 0, keya);
 
-        // Try to read the contents of block 4
-        success = nfc.mifareclassic_ReadDataBlock(4, data);
         if (success)
         {
-          nfc.PrintHexChar(data, 16); // Print the data
-          Serial.println("OK");
+          uint8_t data[16];
 
-          // Wait a bit before reading the card again
-          // delay(200);
-        }
-        else
-        {
-          Serial.println("ERROR");
+            // If you want to write something to block 4 to test with, uncomment
+            // the following line and this text should be read back in a minute
+            //memcpy(data, (const uint8_t[]){ 'a', 'd', 'a', 'f', 'r', 'u', 'i', 't', '.', 'c', 'o', 'm', 0, 0, 0, 0 }, sizeof data);
+            // success = nfc.mifareclassic_WriteDataBlock (4, data);
+
+            // Try to read the contents of block 4
+            success = nfc.mifareclassic_ReadDataBlock(4, data);
+            if (success)
+            {
+              nfc.PrintHexChar(data, 16); // Print the data
+              Serial.println("OK");
+
+              // Wait a bit before reading the card again
+              delay(200);
+            }
+            else
+            {
+              Serial.println("ERROR");
+            }
+          }
+          else
+          {
+            Serial.println("ERROR");
+          }
         }
       }
-      else
-      {
-        Serial.println("ERROR");
-      }
-    }
+  } else {
+      Serial.println("No card found");
+      Serial.println("OK");
   }
 }
 

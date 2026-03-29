@@ -32,6 +32,8 @@ async def read():
     print(f"Raw bytes: {repr(data)}")
 
     if len(data) == 0:
+        with open("/tmp/serial_out.txt", "w") as f:
+            f.write("Nothing\n")
         return None
     else:
         # Parse input
