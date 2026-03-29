@@ -1,10 +1,10 @@
-func _pour_loop_egg(times: int):
+func _pour_loop_cinnamon(times: int):
 	for i in range(times):
-		sprite.texture = tex_pour0_egg if i % 2 == 0 else tex_pour1_egg
+		sprite.texture = tex_pour0_cinnamon if i % 2 == 0 else tex_pour1_cinnamon
 		await get_tree().create_timer(0.3).timeout
-    
 
-func _pour_loop_sugar(times: int):
+
+func _pour_loop_butter(times: int):
 	for i in range(times):
-		sprite.texture = tex_pour0_sugar if i % 2 == 0 else tex_pour1_sugar
+		sprite.texture = tex_pour0_butter if i % 2 == 0 else tex_pour1_butter
 		await get_tree().create_timer(0.3).timeout

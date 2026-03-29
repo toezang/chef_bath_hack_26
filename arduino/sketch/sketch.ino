@@ -84,7 +84,7 @@ void loop(void) {
 
         // If you want to write something to block 4 to test with, uncomment
         // the following line and this text should be read back in a minute
-        memcpy(data, (const uint8_t[]){ 'a', 'd', 'a', 'f', 'r', 'u', 'i', 't', '.', 'c', 'o', 'm', 0, 0, 0, 0 }, sizeof data);
+        memcpy(data, (const uint8_t[]){ 'c', 'i', 'n', 'n', 'a', 'u', 'i', 't', '.', 'c', 'o', 'm', 0, 0, 0, 0 }, sizeof data);
 
         success = nfc.mifareclassic_WriteDataBlock (4, data);
 
