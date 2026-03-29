@@ -16,6 +16,13 @@ var tex_pour1_toffee   = preload("res://images/ingredients/toffee_pouring1.png")
 var tex_lemon   = preload("res://images/ingredients/lemon.png")
 var tex_pour0_lemon   = preload("res://images/ingredients/lemon_pouring.png")
 var tex_pour1_lemon   = preload("res://images/ingredients/lemon_pouring1.png")
+var tex_sugar   = preload("res://images/ingredients/sugar.png")
+var tex_pour0_sugar   = preload("res://images/ingredients/sugar_pouring.png")
+var tex_pour1_sugar   = preload("res://images/ingredients/sugar_pouring1.png")
+var tex_egg   = preload("res://images/ingredients/egg.PNG")
+var tex_pour0_egg   = preload("res://images/ingredients/egg_pouring.png")
+var tex_pour1_egg   = preload("res://images/ingredients/egg_pouring1.png")
+
 
 
 var current_grams = 0.0
@@ -45,12 +52,64 @@ func _on_message_received(msg: String):
 		cont_pouring = true
 		if not is_animating:
 			_start_pour_oats()
+	elif msg.contains("sugar"):
+		cont_pouring = true
+		if not is_animating:
+			_start_pour_sugar()
+	elif msg.contains("egg"):
+		cont_pouring = true
+		if not is_animating:
+			_start_pour_egg()
 	elif msg.contains("lemon"):
 		cont_pouring = true
 		if not is_animating:
 			_start_pour_lemon()
 	else:
 		cont_pouring = false
+
+func _start_pour_sugar():
+	is_animating = true
+	cont_pouring = true
+	sprite.texture = tex_sugar
+	sprite.visible = true
+	current_grams = 0.0
+	await get_tree().create_timer(0.2).timeout # Pause briefly
+	while cont_pouring:
+		sprite.texture = tex_pour0_sugar
+		await get_tree().create_timer(0.1).timeout
+		if not cont_pouring:
+			break
+		sprite.texture = tex_pour1_sugar
+		await get_tree().create_timer(0.1).timeout
+		
+	# Show upright icon before putting away
+	sprite.texture = tex_sugar
+	await get_tree().create_timer(0.5).timeout
+	sprite.visible = false
+	is_animating = false
+	cont_pouring = false
+
+func _start_pour_egg():
+	is_animating = true
+	cont_pouring = true
+	sprite.texture = tex_egg
+	sprite.visible = true
+	current_grams = 0.0
+	await get_tree().create_timer(0.2).timeout # Pause briefly
+	while cont_pouring:
+		sprite.texture = tex_pour0_egg
+		await get_tree().create_timer(0.1).timeout
+		if not cont_pouring:
+			break
+		sprite.texture = tex_pour1_egg
+		await get_tree().create_timer(0.1).timeout
+		
+	# Show upright icon before putting away
+	sprite.texture = tex_egg
+	await get_tree().create_timer(0.5).timeout
+	sprite.visible = false
+	is_animating = false
+	cont_pouring = false
 
 func _start_pour_flour():
 	is_animating = true
@@ -146,6 +205,17 @@ func _pour_loop_flour(times: int):
 		sprite.texture = tex_pour0_flour if i % 2 == 0 else tex_pour1_flour
 		await get_tree().create_timer(0.3).timeout
 		
+func _pour_loop_egg(times: int):
+	for i in range(times):
+		sprite.texture = tex_pour0_egg if i % 2 == 0 else tex_pour1_egg
+		await get_tree().create_timer(0.3).timeout
+	
+
+func _pour_loop_sugar(times: int):
+	for i in range(times):
+		sprite.texture = tex_pour0_sugar if i % 2 == 0 else tex_pour1_sugar
+		await get_tree().create_timer(0.3).timeout
+
 func _pour_loop_lemon(times: int):
 	for i in range(times):
 		sprite.texture = tex_pour0_lemon if i % 2 == 0 else tex_pour1_lemon
