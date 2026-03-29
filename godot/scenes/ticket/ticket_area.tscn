@@ -13,20 +13,22 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_4uvbr")
 
 [node name="ticketShape" type="Polygon2D" parent="ticketCollision" unique_id=1956714434]
-position = Vector2(-2.522934, -1.8317757)
-scale = Vector2(1.0458716, 1.0373832)
+position = Vector2(-91.667465, 84.41666)
+scale = Vector2(2.3494217, 2.3125)
 polygon = PackedVector2Array(-63.56141, -67.63964, 68.38596, -67.63964, 68.38596, 71.17117, -63.56141, 71.17117)
 
 [node name="title" type="RichTextLabel" parent="ticketCollision" unique_id=1963669969]
-offset_left = -62.0
-offset_top = -69.0
-offset_right = 63.0
-offset_bottom = -29.0
+offset_left = -220.0
+offset_top = -60.0
+offset_right = -95.0
+offset_bottom = -20.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="body" type="RichTextLabel" parent="ticketCollision" unique_id=646699417]
-offset_left = -60.0
-offset_top = -19.0
-offset_right = 64.0
-offset_bottom = 56.0
+offset_left = -223.0
+offset_top = 12.0
+offset_right = -99.0
+offset_bottom = 87.0
 theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+metadata/_edit_use_anchors_ = true
