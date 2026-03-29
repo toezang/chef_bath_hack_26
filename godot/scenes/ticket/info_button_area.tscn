@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://igw58m7j1pqk"]
+
+[ext_resource type="Script" path="res://info_button_area.gd" id="1_5x4yw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6tqd"]
+
+[node name="infoButtonArea" type="Area2D" unique_id=677736687]
+script = ExtResource("1_5x4yw")
+
+[node name="infoCollisionArea" type="CollisionShape2D" parent="." unique_id=1342381057]
+shape = SubResource("RectangleShape2D_q6tqd")
+
+[node name="informationButton" type="Sprite2D" parent="infoCollisionArea" unique_id=487840812]
