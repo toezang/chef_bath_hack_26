@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var parent = $"../.."
+@onready var mixingBowl = $"../mixingBowl"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,6 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \
 	and event.button_index == MOUSE_BUTTON_LEFT \
@@ -18,5 +19,4 @@ func _input_event(viewport, event, shape_idx):
 		self.on_click()
 
 func on_click():
-	Game.go_to_order_station()
-	
+	mixingBowl.add_instruction("Liquefy contents of the mixing bowl.")

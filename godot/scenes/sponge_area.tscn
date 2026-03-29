@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://bvr15tv5dvfdg"]
 
-[ext_resource type="Script" uid="uid://b7tmqxcr41yy" path="res://scenes/sponge/sponge_area.gd" id="1_gss3c"]
-[ext_resource type="Texture2D" uid="uid://byssxr4bts0bo" path="res://actual_pngs/sponge.png" id="2_ip0cj"]
+[ext_resource type="Script" uid="uid://c8hi8156t5shb" path="res://scenes/sponge/sponge_area.gd" id="1_gss3c"]
+[ext_resource type="Texture2D" uid="uid://byssxr4bts0bo" path="res://images/actual_pngs/sponge.png" id="2_ip0cj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyuln"]
-size = Vector2(158, 179)
+size = Vector2(122, 143.5)
 
 [node name="spongeArea" type="Area2D" unique_id=645166020]
 script = ExtResource("1_gss3c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2134606359]
-position = Vector2(-7, -2)
+position = Vector2(11, 15.75)
 shape = SubResource("RectangleShape2D_uyuln")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1071285872]
-position = Vector2(4, 6.5)
+position = Vector2(-17, -11.75)
 scale = Vector2(0.34478372, 0.38225806)
 texture = ExtResource("2_ip0cj")
