@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c311cxsy2m1s2"]
+
+[ext_resource type="Script" uid="uid://dy23fkpxqoeqc" path="res://scenes/mixer/mixer_area.gd" id="1_cl6so"]
+[ext_resource type="Texture2D" uid="uid://cyv1t0r4i2bvy" path="res://images/actual_pngs/mixer.png" id="1_t1lwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_peoce"]
+size = Vector2(186, 172.5)
+
+[node name="mixerArea" type="Area2D" unique_id=717251651]
+script = ExtResource("1_cl6so")
+
+[node name="mixerCollisionShape" type="CollisionShape2D" parent="." unique_id=389144232]
+position = Vector2(4, 2)
+shape = SubResource("RectangleShape2D_peoce")
+
+[node name="mixerSprite" type="Sprite2D" parent="mixerCollisionShape" unique_id=2115311765]
+position = Vector2(1.0000076, -0.75)
+scale = Vector2(0.6170483, 0.6070442)
+texture = ExtResource("1_t1lwx")

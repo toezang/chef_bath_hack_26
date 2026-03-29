@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw137wmqvccic"
-path="res://.godot/imported/flour.png-a9af16b72b6c1ce03df270a77ecdc6c1.ctex"
+uid="uid://bqs0toghqjhxc"
+path="res://.godot/imported/woman1.png-19bf75e75dc68b747bd5730870cea8c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/ingredients/flour.png"
-dest_files=["res://.godot/imported/flour.png-a9af16b72b6c1ce03df270a77ecdc6c1.ctex"]
+source_file="res://images/characters/woman1.png"
+dest_files=["res://.godot/imported/woman1.png-19bf75e75dc68b747bd5730870cea8c6.ctex"]
 
 [params]
 

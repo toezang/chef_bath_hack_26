@@ -19,4 +19,4 @@ func _input_event(viewport, event, shape_idx):
 
 func on_click():
 	print("Click")
-	mixingBowl.add_instruction("mix ingredients")
+	mixingBowl.add_instruction("fold ingredients")
