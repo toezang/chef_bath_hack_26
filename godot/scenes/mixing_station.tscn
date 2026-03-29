@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://canv8j8us2gu8" path="res://scenes/mixing_bowl.tscn" id="4_iflqh"]
 [ext_resource type="PackedScene" uid="uid://bm60os3syg0bc" path="res://scenes/bake_button.tscn" id="5_2yo2c"]
 [ext_resource type="Script" uid="uid://cmwvqk1mc0tue" path="res://scenes/listener.gd" id="7_67sir"]
+[ext_resource type="PackedScene" uid="uid://dtgb5y0n06qr0" path="res://scenes/blender/blender_area.tscn" id="6_2ofvr"]
+[ext_resource type="PackedScene" uid="uid://c311cxsy2m1s2" path="res://scenes/mixer/mixer_area.tscn" id="7_67sir"]
 
 [node name="mixing_station" type="Node2D" unique_id=383326379]
 script = ExtResource("1_2ofvr")
@@ -41,3 +43,8 @@ offset_left = 487.0
 offset_top = 516.0
 offset_right = 645.0
 offset_bottom = 583.0
+[node name="blenderArea" parent="." unique_id=980036525 instance=ExtResource("6_2ofvr")]
+position = Vector2(390, 113)
+
+[node name="mixerArea" parent="." unique_id=717251651 instance=ExtResource("7_67sir")]
+position = Vector2(151, 112)

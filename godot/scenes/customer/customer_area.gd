@@ -2,11 +2,11 @@ extends Area2D
 
 @onready var mixingBowl = $"../../mixing_station/mixingBowl"
 
-@onready var orderTicket = $"../../orderArea"
+@onready var orderTicket = $"../ticketArea"
 
 @onready var parentScript = $"../.."
 
-var state = "";
+var state = "ordering";
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,23 +25,16 @@ func _input_event(viewport, event, shape_idx):
 		self.on_click()
 
 func on_click():
+	print("i have been clicked")
 	if state == "ordering":
-		print("i am ordering!")
 		state = "waiting"
-		print(Game.helloWorldSoufle[0])
-		print(Game.helloWorldSoufle[1])
-		print(Game.helloWorldSoufle[2])
-		Order.create_order(
+		print("creating an order")
+		print('hello world souffle 0:', Game.helloWorldSoufle[0])
+		orderTicket._changeText(
 			Game.helloWorldSoufle[0],
 			Game.helloWorldSoufle[1],
 			Game.helloWorldSoufle[2],
 		)
-	elif state == "waiting":
-		print("i would like to recieve my meal!")
-	
-		if mixingBowl.ingredients == [] and mixingBowl.instructions == []:
-			print("no meal available!")
-		else:
-			print("there is a meal yay!")
+
 	
 		
