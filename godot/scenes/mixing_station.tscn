@@ -38,8 +38,10 @@ position = Vector2(390, 113)
 position = Vector2(151, 112)
 
 [node name="Label" type="Label" parent="." unique_id=663650857]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 601.0
+offset_top = 457.0
+offset_right = 722.0
+offset_bottom = 544.0
 
 [node name="ingredients" type="Sprite2D" parent="." unique_id=1795983138]
 

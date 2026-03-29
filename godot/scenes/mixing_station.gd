@@ -5,8 +5,18 @@ extends Node
 @onready var weight_label = $Label
 
 var tex_flour   = preload("res://images/ingredients/flour.png")
-var tex_pour0   = preload("res://images/ingredients/flour_pouring.png")
-var tex_pour1   = preload("res://images/ingredients/flour_pouring1.png")
+var tex_pour0_flour   = preload("res://images/ingredients/flour_pouring.png")
+var tex_pour1_flour   = preload("res://images/ingredients/flour_pouring1.png")
+var tex_oats   = preload("res://images/ingredients/oats.png")
+var tex_pour0_oats   = preload("res://images/ingredients/oats_pouring.png")
+var tex_pour1_oats   = preload("res://images/ingredients/oats_pouring1.png")
+var tex_toffee   = preload("res://images/ingredients/toffee.png")
+var tex_pour0_toffee   = preload("res://images/ingredients/toffee_pouring.png")
+var tex_pour1_toffee   = preload("res://images/ingredients/toffee_pouring1.png")
+var tex_lemon   = preload("res://images/ingredients/lemon.png")
+var tex_pour0_lemon   = preload("res://images/ingredients/lemon_pouring.png")
+var tex_pour1_lemon   = preload("res://images/ingredients/lemon_pouring1.png")
+
 
 var current_grams = 0.0
 var grams_per_second = 40.0
@@ -14,6 +24,7 @@ var is_animating = false
 var cont_pouring = false
 
 func _ready():
+	weight_label.text = "0g"
 	print("ready")
 	sprite.visible = false
 	# Listen for RFID cards
@@ -22,17 +33,26 @@ func _ready():
 	listener.message_received.connect(_on_message_received)
 
 func _on_message_received(msg: String):
-	print("received")
 	if msg.contains("flour"):
 		cont_pouring = true
-		print("pouring")
 		if not is_animating:
-			print("not pouring")
-			_start_pour()
+			_start_pour_flour()
+	elif msg.contains("toffee"):
+		cont_pouring = true
+		if not is_animating:
+			_start_pour_toffee()
+	elif msg.contains("oats"):
+		cont_pouring = true
+		if not is_animating:
+			_start_pour_oats()
+	elif msg.contains("lemon"):
+		cont_pouring = true
+		if not is_animating:
+			_start_pour_lemon()
 	else:
 		cont_pouring = false
 
-func _start_pour():
+func _start_pour_flour():
 	is_animating = true
 	cont_pouring = true
 	sprite.texture = tex_flour
@@ -40,11 +60,11 @@ func _start_pour():
 	current_grams = 0.0
 	await get_tree().create_timer(0.2).timeout # Pause briefly
 	while cont_pouring:
-		sprite.texture = tex_pour0
+		sprite.texture = tex_pour0_flour
 		await get_tree().create_timer(0.1).timeout
 		if not cont_pouring:
 			break
-		sprite.texture = tex_pour1
+		sprite.texture = tex_pour1_flour
 		await get_tree().create_timer(0.1).timeout
 		
 	# Show upright icon before putting away
@@ -54,12 +74,94 @@ func _start_pour():
 	is_animating = false
 	cont_pouring = false
 
+func _start_pour_lemon():
+	is_animating = true
+	cont_pouring = true
+	sprite.texture = tex_lemon
+	sprite.visible = true
+	current_grams = 0.0
+	await get_tree().create_timer(0.2).timeout # Pause briefly
+	while cont_pouring:
+		sprite.texture = tex_pour0_lemon
+		await get_tree().create_timer(0.1).timeout
+		if not cont_pouring:
+			break
+		sprite.texture = tex_pour1_lemon
+		await get_tree().create_timer(0.1).timeout
+		
+	# Show upright icon before putting away
+	sprite.texture = tex_lemon
+	await get_tree().create_timer(0.5).timeout
+	sprite.visible = false
+	is_animating = false
+	cont_pouring = false
+
+func _start_pour_toffee():
+	is_animating = true
+	cont_pouring = true
+	sprite.texture = tex_toffee
+	sprite.visible = true
+	current_grams = 0.0
+	await get_tree().create_timer(0.2).timeout # Pause briefly
+	while cont_pouring:
+		sprite.texture = tex_pour0_toffee
+		await get_tree().create_timer(0.1).timeout
+		if not cont_pouring:
+			break
+		sprite.texture = tex_pour1_toffee
+		await get_tree().create_timer(0.1).timeout
+		
+	# Show upright icon before putting away
+	sprite.texture = tex_toffee
+	await get_tree().create_timer(0.5).timeout
+	sprite.visible = false
+	is_animating = false
+	cont_pouring = false
+
+func _start_pour_oats():
+	is_animating = true
+	cont_pouring = true
+	sprite.texture = tex_oats
+	sprite.visible = true
+	current_grams = 0.0
+	await get_tree().create_timer(0.2).timeout # Pause briefly
+	while cont_pouring:
+		sprite.texture = tex_pour0_oats
+		await get_tree().create_timer(0.1).timeout
+		if not cont_pouring:
+			break
+		sprite.texture = tex_pour1_oats
+		await get_tree().create_timer(0.1).timeout
+		
+	# Show upright icon before putting away
+	sprite.texture = tex_oats
+	await get_tree().create_timer(0.5).timeout
+	sprite.visible = false
+	is_animating = false
+	cont_pouring = false
+
 # Pouring animation loop
-func _pour_loop(times: int):
+func _pour_loop_flour(times: int):
 	for i in range(times):
-		sprite.texture = tex_pour0 if i % 2 == 0 else tex_pour1
+		sprite.texture = tex_pour0_flour if i % 2 == 0 else tex_pour1_flour
 		await get_tree().create_timer(0.3).timeout
 		
+func _pour_loop_lemon(times: int):
+	for i in range(times):
+		sprite.texture = tex_pour0_lemon if i % 2 == 0 else tex_pour1_lemon
+		await get_tree().create_timer(0.3).timeout
+
+func _pour_loop_toffee(times: int):
+	for i in range(times):
+		sprite.texture = tex_pour0_toffee if i % 2 == 0 else tex_pour1_toffee
+		await get_tree().create_timer(0.3).timeout
+
+func _pour_loop_oats(times: int):
+	for i in range(times):
+		sprite.texture = tex_pour0_oats if i % 2 == 0 else tex_pour1_oats
+		await get_tree().create_timer(0.3).timeout
+
+
 # Count grams being weighed
 func _process(delta):
 	if is_animating and cont_pouring:
