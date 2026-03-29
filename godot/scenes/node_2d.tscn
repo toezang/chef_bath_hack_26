@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://ddq7fj23usw1j"]
 
 [ext_resource type="Script" uid="uid://dxxx2e22ceq7e" path="res://game.gd" id="1_q6r6c"]
-[ext_resource type="PackedScene" uid="uid://c0y7hysdejn60" path="res://scenes/mixing_station.tscn" id="2_04qyp"]
-[ext_resource type="PackedScene" uid="uid://c00se738m3tyg" path="res://scenes/order_station.tscn" id="3_j7wrs"]
-[ext_resource type="PackedScene" uid="uid://csfnkcmunquc" path="res://scenes/baking_station.tscn" id="4_fws66"]
-[ext_resource type="PackedScene" uid="uid://c5as3w4kq8035" path="res://scenes/order.tscn" id="6_j7wrs"]
+[ext_resource type="PackedScene" uid="uid://canv8j8us2gu8" path="res://scenes/mixing_bowl.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://ctbae4n4tkcdj" path="res://scenes/spoon_area.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://bvr15tv5dvfdg" path="res://scenes/sponge_area.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://r1q4mbtc5203" path="res://scenes/customer_area.tscn" id="4_0hol4"]
+[ext_resource type="Script" uid="uid://cmwvqk1mc0tue" path="res://scenes/listener.gd" id="6_j7wrs"]
 
 [node name="game" type="Node2D" unique_id=1695942799]
 script = ExtResource("1_q6r6c")
@@ -17,5 +18,15 @@ visible = true
 [node name="baking_station" parent="." unique_id=1259147323 instance=ExtResource("4_fws66")]
 position = Vector2(-1, 28)
 
-[node name="orderArea" parent="." unique_id=678147564 instance=ExtResource("6_j7wrs")]
-position = Vector2(968, 103)
+[node name="mixingBowl" parent="mixing_station" unique_id=1967112996 instance=ExtResource("1_wtcfe")]
+position = Vector2(548, 497)
+
+[node name="order_station" type="Node2D" parent="." unique_id=1184455261]
+
+[node name="customerArea" parent="order_station" unique_id=974708978 instance=ExtResource("4_0hol4")]
+position = Vector2(236, 305)
+
+[node name="baking_station" type="Node2D" parent="." unique_id=2007531514]
+
+[node name="SerialListener" type="Node" parent="." unique_id=2078952550]
+script = ExtResource("6_j7wrs")
