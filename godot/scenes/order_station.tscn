@@ -4,20 +4,25 @@
 [ext_resource type="Texture2D" uid="uid://m5po7xge2v7u" path="res://images/actual_pngs/serving_screen.jpeg" id="1_syew5"]
 [ext_resource type="PackedScene" uid="uid://c3uqslebkogsl" path="res://scenes/mix_button.tscn" id="3_mhw2n"]
 [ext_resource type="PackedScene" uid="uid://tt7n20almamd" path="res://scenes/ticket/ticket_area.tscn" id="4_mhw2n"]
+[ext_resource type="PackedScene" uid="uid://dsqnvl2hly8ps" path="res://scenes/ticket/sprite_2d.tscn" id="5_y6r1r"]
 
 [node name="order_station" type="Node2D" unique_id=1342575237]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=81067386]
-position = Vector2(575.00006, 362)
-scale = Vector2(0.6119792, 0.5823508)
+position = Vector2(1509.25, 1033.4375)
+scale = Vector2(1.5851562, 1.5719417)
 texture = ExtResource("1_syew5")
 
 [node name="customerArea" parent="." unique_id=974708978 instance=ExtResource("1_3hjwy")]
-position = Vector2(357, 254.00002)
+position = Vector2(375, 1390)
 scale = Vector2(1.41, 1.41)
 
 [node name="mixButtonArea" parent="." unique_id=1923483095 instance=ExtResource("3_mhw2n")]
-position = Vector2(877, 570)
+position = Vector2(2594, 1728)
 
 [node name="ticketArea" parent="." unique_id=1665167206 instance=ExtResource("4_mhw2n")]
-position = Vector2(1020, 91)
+position = Vector2(2470, 315)
+
+[node name="Sprite2D2" parent="." unique_id=1278424595 instance=ExtResource("5_y6r1r")]
+position = Vector2(1520, 964)
+scale = Vector2(0.3791541, 0.47847357)

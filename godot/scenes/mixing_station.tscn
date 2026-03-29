@@ -15,28 +15,28 @@
 script = ExtResource("1_iflqh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=546455816]
-position = Vector2(588, 325.00006)
-scale = Vector2(0.46889177, 0.38267645)
+position = Vector2(1511.25, 982.75006)
+scale = Vector2(1.0672392, 0.9855637)
 texture = ExtResource("1_gwhk7")
 
 [node name="spongeArea" parent="." unique_id=645166020 instance=ExtResource("2_2ofvr")]
-position = Vector2(557, 107)
+position = Vector2(1368, 399)
 script = null
 
 [node name="spoonArea" parent="." unique_id=2045333420 instance=ExtResource("3_67sir")]
-position = Vector2(775, 99)
+position = Vector2(1824, 421)
 
 [node name="mixingBowl" parent="." unique_id=1967112996 instance=ExtResource("4_iflqh")]
-position = Vector2(548, 497)
+position = Vector2(1335, 1497)
 
 [node name="bakeButtonArea" parent="." unique_id=641651852 instance=ExtResource("5_2yo2c")]
-position = Vector2(964, 557)
+position = Vector2(1881, 1363)
 
 [node name="blenderArea" parent="." unique_id=980036525 instance=ExtResource("6_2ofvr")]
-position = Vector2(390, 113)
+position = Vector2(968, 376)
 
 [node name="mixerArea" parent="." unique_id=717251651 instance=ExtResource("8_iflqh")]
-position = Vector2(151, 112)
+position = Vector2(532, 369)
 
 [node name="Label" type="Label" parent="." unique_id=663650857]
 offset_left = 943.0
@@ -55,4 +55,4 @@ script = ExtResource("7_67sir")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=750014684]
 
 [node name="ticketArea" parent="." unique_id=1665167206 instance=ExtResource("10_mpew0")]
-position = Vector2(1072, 86)
+position = Vector2(2365, 395)

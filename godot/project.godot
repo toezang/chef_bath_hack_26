@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 Game="*uid://dxxx2e22ceq7e"
 Order="*uid://dtyx33t5uahnr"
 
+[display]
+
+window/size/viewport_width=3000
+window/size/viewport_height=2000
+
 [dotnet]
 
 project/assembly_name="hackathon"
