@@ -23,13 +23,13 @@ func change_scene(newScene: String) -> void:
 		go_to_order_station()
 
 func go_to_mixing_station() -> void:
-	get_tree().change_scene_to_packed(mixing_station)
+	get_tree().change_scene_to_file("res://scenes/mixing_station.tscn")
 
 func go_to_order_station() -> void:
-	get_tree().change_scene_to_packed(baking_station)
+	get_tree().change_scene_to_file("res://scenes/order_station.tscn")
 
 func go_to_baking_station() -> void:
-	get_tree().change_scene_to_packed(serving_station)
+	get_tree().change_scene_to_file("res://scenes/baking_station.tscn")
 
 
 

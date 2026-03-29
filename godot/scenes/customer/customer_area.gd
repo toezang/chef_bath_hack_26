@@ -28,13 +28,13 @@ func on_click():
 	if state == "ordering":
 		print("i am ordering!")
 		state = "waiting"
-		print(parentScript.helloWorldSoufle[0])
-		print(parentScript.helloWorldSoufle[1])
-		print(parentScript.helloWorldSoufle[2])
-		orderTicket.create_order(
-			parentScript.helloWorldSoufle[0],
-			parentScript.helloWorldSoufle[1],
-			parentScript.helloWorldSoufle[2],
+		print(Game.helloWorldSoufle[0])
+		print(Game.helloWorldSoufle[1])
+		print(Game.helloWorldSoufle[2])
+		Order.create_order(
+			Game.helloWorldSoufle[0],
+			Game.helloWorldSoufle[1],
+			Game.helloWorldSoufle[2],
 		)
 	elif state == "waiting":
 		print("i would like to recieve my meal!")

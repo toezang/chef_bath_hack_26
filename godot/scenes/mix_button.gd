@@ -18,5 +18,5 @@ func _input_event(viewport, event, shape_idx):
 		self.on_click()
 
 func on_click():
-	parent.go_to_mixing_station()
+	Game.go_to_mixing_station()
 	

@@ -15,7 +15,6 @@ script = ExtResource("1_q6r6c")
 visible = true
 
 [node name="baking_station" parent="." unique_id=1259147323 instance=ExtResource("4_fws66")]
-visible = true
 position = Vector2(-1, 28)
 
 [node name="orderArea" parent="." unique_id=678147564 instance=ExtResource("6_j7wrs")]
