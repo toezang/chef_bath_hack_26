@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c0y7hysdejn60"]
 
+[ext_resource type="Script" uid="uid://cmwvqk1mc0tue" path="res://scenes/listener.gd" id="1_2ofvr"]
 [ext_resource type="Texture2D" uid="uid://dcj03eidtowda" path="res://images/IMG_0411.JPG" id="1_gwhk7"]
 [ext_resource type="PackedScene" uid="uid://bvr15tv5dvfdg" path="res://scenes/sponge_area.tscn" id="2_2ofvr"]
 [ext_resource type="PackedScene" uid="uid://ctbae4n4tkcdj" path="res://scenes/spoon_area.tscn" id="3_67sir"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bm60os3syg0bc" path="res://scenes/bake_button.tscn" id="5_2yo2c"]
 
 [node name="mixing_station" type="Node2D" unique_id=383326379]
+script = ExtResource("1_2ofvr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=546455816]
 position = Vector2(588, 325.00006)
