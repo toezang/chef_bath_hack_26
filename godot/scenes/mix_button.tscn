@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c3uqslebkogsl"]
+
+[ext_resource type="Texture2D" uid="uid://bo7vqaxgwy1u" path="res://images/actual_pngs/Buttons.png" id="1_4celg"]
+[ext_resource type="Script" uid="uid://b0dxckvkw86np" path="res://scenes/mix_button.gd" id="1_kflkh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kflkh"]
+
+[node name="mixButtonArea" type="Area2D" unique_id=1923483095]
+script = ExtResource("1_kflkh")
+
+[node name="mixCollisionShape" type="CollisionShape2D" parent="." unique_id=1900704814]
+shape = SubResource("RectangleShape2D_kflkh")
+
+[node name="mixSprite" type="Sprite2D" parent="mixCollisionShape" unique_id=1090109262]
+texture = ExtResource("1_4celg")

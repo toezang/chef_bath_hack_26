@@ -9,11 +9,9 @@ var instructions = [];
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
 
 func _add_ingredient(ingredient: String) -> void:
 	ingredients.append(ingredient)
@@ -24,3 +22,9 @@ func add_instruction(instruction: String) -> void:
 	instructions.append(instruction)
 	print("did instricution! instructios so far:")
 	print(instructions)
+
+
+func get_contents() -> String:
+	return (
+		ingredients + instructions
+	)

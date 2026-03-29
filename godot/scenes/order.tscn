@@ -1,34 +1,38 @@
 [gd_scene format=3 uid="uid://c5as3w4kq8035"]
 
-[ext_resource type="Script" uid="uid://dtyx33t5uahnr" path="res://order.gd" id="1_vwbfx"]
+[ext_resource type="Script" uid="uid://dtyx33t5uahnr" path="res://scenes/order/order.gd" id="1_vwbfx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jo6x"]
+size = Vector2(262.5, 266.5)
 
 [node name="orderArea" type="Area2D" unique_id=678147564]
 script = ExtResource("1_vwbfx")
 
 [node name="orderCollisionShape" type="CollisionShape2D" parent="." unique_id=270338981]
-
-[node name="orderSprite" type="Sprite2D" parent="orderCollisionShape" unique_id=706319393]
+position = Vector2(37.75, 42.75)
+shape = SubResource("RectangleShape2D_1jo6x")
 
 [node name="Polygon2D" type="Polygon2D" parent="orderCollisionShape" unique_id=1912653738]
-position = Vector2(89.14285, 0)
-scale = Vector2(0.46938777, 1)
-polygon = PackedVector2Array(168, 60, 216, 60, 217, 80, 206.34784, 80, 195.69568, 80, 168, 80)
+position = Vector2(1024.8759, -921.1609)
+rotation = 3.1415925
+scale = Vector2(5.3217564, -13.15988)
+polygon = PackedVector2Array(167.91936, 59.834183, 217.15123, 59.910168, 217, 80, 206.34784, 80, 195.69568, 80, 168, 80)
 
-[node name="Label" type="Label" parent="orderCollisionShape/Polygon2D" unique_id=1443887632]
-offset_left = 176.52174
-offset_top = 66.0
-offset_right = 210.52174
-offset_bottom = 83.0
-theme_override_colors/font_color = Color(0.007843138, 0, 0, 1)
-theme_override_font_sizes/font_size = 4
-text = "Say \"Hello world\"
+[node name="title" type="Label" parent="orderCollisionShape" unique_id=1094159114]
+offset_left = -105.75
+offset_top = -132.75
+offset_right = 108.25
+offset_bottom = -90.75
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="body" type="RichTextLabel" parent="orderCollisionShape" unique_id=1263108296]
+offset_left = -116.75
+offset_top = -91.75
+offset_right = 117.25
+offset_bottom = 119.25
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "
 "
 
-[node name="Label2" type="Label" parent="orderCollisionShape/Polygon2D" unique_id=1094159114]
-offset_left = 178.65219
-offset_top = 66.0
-offset_right = 207.65219
-offset_bottom = 73.0
-theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
-theme_override_font_sizes/font_size = 4
-text = "Cheese Souffle"
+[node name="orderSprite" type="Sprite2D" parent="orderCollisionShape" unique_id=706319393]
