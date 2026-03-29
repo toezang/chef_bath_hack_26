@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c00se738m3tyg"]
+
+[ext_resource type="PackedScene" uid="uid://r1q4mbtc5203" path="res://scenes/customer_area.tscn" id="1_3hjwy"]
+[ext_resource type="Texture2D" uid="uid://m5po7xge2v7u" path="res://images/actual_pngs/serving_screen.jpeg" id="1_syew5"]
+[ext_resource type="PackedScene" uid="uid://c3uqslebkogsl" path="res://scenes/mix_button.tscn" id="3_mhw2n"]
+
+[node name="order_station" type="Node2D" unique_id=1342575237]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=81067386]
+position = Vector2(575.00006, 362)
+scale = Vector2(0.6119792, 0.5823508)
+texture = ExtResource("1_syew5")
+
+[node name="customerArea" parent="." unique_id=974708978 instance=ExtResource("1_3hjwy")]
+position = Vector2(329, 300)
+
+[node name="mixButtonArea" parent="." unique_id=1923483095 instance=ExtResource("3_mhw2n")]
+position = Vector2(877, 570)

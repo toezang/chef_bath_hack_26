@@ -15,6 +15,11 @@ run/main_scene="uid://ddq7fj23usw1j"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*uid://dxxx2e22ceq7e"
+Order="*uid://dtyx33t5uahnr"
+
 [dotnet]
 
 project/assembly_name="hackathon"

@@ -1,8 +1,6 @@
 extends Area2D
 
-var isShowingRecipe = true;
-
-@onready var labelBody = $orderCollisionShape/Polygon2D/Label
+@onready var parent = $"../.."
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,8 +11,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func _input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton \
+	and event.button_index == MOUSE_BUTTON_LEFT \
+	and event.is_pressed():
+		self.on_click()
 
-
-func switch_sides() -> void:
-	if isShowingRecipe:
-		labelBody.text = "hiii"
+func on_click():
+	parent.go_to_serving_station()
+	

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bm60os3syg0bc"]
+
+[ext_resource type="Script" uid="uid://bou70p0ckhpov" path="res://scenes/bake_button.gd" id="1_s8o5k"]
+[ext_resource type="Texture2D" uid="uid://dtniuylci0cfd" path="res://images/actual_pngs/bake.png" id="2_kovu6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nganp"]
+size = Vector2(278, 144.5)
+
+[node name="bakeButtonArea" type="Area2D" unique_id=641651852]
+script = ExtResource("1_s8o5k")
+
+[node name="bakeButtonCollisionShape" type="CollisionShape2D" parent="." unique_id=961054284]
+position = Vector2(22, -1.25)
+shape = SubResource("RectangleShape2D_nganp")
+
+[node name="bakeButtonSprite" type="Sprite2D" parent="bakeButtonCollisionShape" unique_id=2087065535]
+position = Vector2(-11.999985, 1.2499962)
+scale = Vector2(0.60986966, 0.55847955)
+texture = ExtResource("2_kovu6")

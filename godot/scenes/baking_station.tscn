@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://csfnkcmunquc"]
+
+[ext_resource type="Script" uid="uid://dnv8wc58emy6w" path="res://scenes/baking_station.gd" id="1_w346c"]
+[ext_resource type="Texture2D" uid="uid://cty8l36165qsx" path="res://images/IMG_0413.JPG" id="1_y4uan"]
+
+[node name="baking_station" type="Node2D" unique_id=1259147323]
+script = ExtResource("1_w346c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1665841107]
+position = Vector2(577.12494, 278.875)
+scale = Vector2(0.37321776, 0.33260766)
+texture = ExtResource("1_y4uan")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1407175368]
