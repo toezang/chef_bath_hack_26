@@ -44,6 +44,7 @@ offset_right = 722.0
 offset_bottom = 544.0
 
 [node name="ingredients" type="Sprite2D" parent="." unique_id=1795983138]
+position = Vector2(559, 311)
 
 [node name="Listener" type="Node" parent="." unique_id=1856947874]
 script = ExtResource("7_67sir")
