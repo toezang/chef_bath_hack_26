@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dtgb5y0n06qr0"]
+
+[ext_resource type="Script" uid="uid://ej6up84ml3p8" path="res://blender_area.gd" id="1_e2ph1"]
+[ext_resource type="Texture2D" uid="uid://deguoxk7qypao" path="res://images/actual_pngs/blender.png" id="2_imhbd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cw8j"]
+size = Vector2(149, 188)
+
+[node name="blenderArea" type="Area2D" unique_id=980036525]
+script = ExtResource("1_e2ph1")
+
+[node name="blenderCollisionShape" type="CollisionShape2D" parent="." unique_id=1238480812]
+position = Vector2(-3, 3)
+shape = SubResource("RectangleShape2D_5cw8j")
+
+[node name="Sprite2D" type="Sprite2D" parent="blenderCollisionShape" unique_id=1366070791]
+position = Vector2(-5.000023, -1.9999924)
+scale = Vector2(0.4868421, 0.5023585)
+texture = ExtResource("2_imhbd")

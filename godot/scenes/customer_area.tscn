@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://r1q4mbtc5203"]
 
 [ext_resource type="Script" uid="uid://bbw28pphg2oli" path="res://scenes/customer/customer_area.gd" id="1_jcrru"]
-[ext_resource type="Texture2D" uid="uid://cyqsfu2vvieh2" path="res://images/placeholder_pngs/customer2.png" id="1_kb8aq"]
+[ext_resource type="Texture2D" uid="uid://bqs0toghqjhxc" path="res://images/characters/woman1.png" id="2_obcie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcrru"]
 size = Vector2(130, 216)
@@ -14,5 +14,6 @@ position = Vector2(-1, 30)
 shape = SubResource("RectangleShape2D_jcrru")
 
 [node name="customerSprite" type="Sprite2D" parent="customerCollisionArea" unique_id=439035213]
-scale = Vector2(0.62285715, 0.63714284)
-texture = ExtResource("1_kb8aq")
+position = Vector2(-4.3628507, -6.2835445)
+scale = Vector2(0.20458344, 0.20067866)
+texture = ExtResource("2_obcie")
